@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Лабораторна робота №3
+    </ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-title>
+      Виконала студентка КН-31, Грабець Наталія, варіант 1
+    </ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button color="dark" menu="first"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Лабораторні роботи</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Лабораторна робота №3</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-text>Читання даних з JSON файлу</ion-text>
+      <ion-button expand="block" (click)="loadBooks()">Завантажити</ion-button>
+      <ion-item>
+        <ion-label position="floating">Прізвище автора</ion-label>
+        <ion-input [(ngModel)]="authorSurname" type="text"></ion-input>
+      </ion-item>
+      <ion-list>
+        <ion-item button *ngFor="let book of books; index as i" detail (click)="toggleDetails(i)">
+          <ion-label *ngIf="!showDetails[i]" text-wrap [ngStyle]="{'color': getColor(book.author)}">
+            <h2>{{ book.title }}</h2>
+          </ion-label>
+          <ion-text *ngIf="showDetails[i]">
+            <h2 [ngStyle]="{'color': getColor(book.author)}">{{ book.title }}</h2>
+            <p>Автор: {{ book.author }}</p>
+            <p>Сторінки: {{ book.pages }}</p>
+            <p>Рік: {{ book.year }}</p>
+          </ion-text>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

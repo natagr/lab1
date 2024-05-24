@@ -1,0 +1,44 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Лабораторна робота №1
+    </ion-title>
+  </ion-toolbar>
+
+  <ion-toolbar>
+    <ion-title>
+      Виконала студентка КН-31, Грабець Наталія, варіант 1
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Завдання №2</ion-card-title>
+    </ion-card-header>
+  
+    <ion-card-content>
+      <p class="p_background">На заданому
+        проміжку чисел [a,b]
+        знайти суму всіх, які
+        кратні 11 та при
+        діленні на 8 дають в
+        остачі 5.</p>
+        <ion-item>
+          <ion-label position="floating">Перше число</ion-label>
+          <ion-input type="number" id="x" value="1" #Inputx></ion-input>
+        </ion-item>
+    
+        <ion-item>
+          <ion-label position="floating">Друге число</ion-label>
+          <ion-input type="number" id="y" value="2" #Inputy></ion-input>
+        </ion-item>
+
+        <ion-button expand="block" (click)="sum(Inputx.value, Inputy.value)">Розрахувати</ion-button>
+        <ion-item>
+          <p>Результат обчислення: {{d}}</p>
+        </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

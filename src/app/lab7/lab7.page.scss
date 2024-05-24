@@ -1,0 +1,25 @@
+p {
+    font-size: 16px;
+    line-height: 42px;
+    color: #120303;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+.p_background {
+    background-color: #97bfed;
+}
+
+.img_formula {
+    background: url('../formula.jpg');
+    height: 100px;
+    max-width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    image-rendering: crisp-edges;
+  }
+  

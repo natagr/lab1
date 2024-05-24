@@ -1,0 +1,121 @@
+<!-- 
+<app-my-header name="Лабораторна робота №10"> </app-my-header>
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-button (click)="nextPosition()">Наступна позиція</ion-button>
+    <ion-label> Поточна позиція:</ion-label>
+    <ion-label> {{ position.name }} </ion-label>
+  </ion-item>
+
+  <ion-card *ngFor="let employee of employeeList.searchEmployee; let j = index">
+    <ion-item>{{ employee.employer }}</ion-item>
+    <ion-item>{{ employee.name }}</ion-item>
+    <ion-item>Вік: {{ employee.age }}</ion-item>
+    <ion-item>Зарплата: {{ employee.salary }}</ion-item>
+  </ion-card>
+
+  <ion-item>
+    <ion-label position="stacked">Введіть нову позицію</ion-label>
+    <ion-input #InputPosition></ion-input>
+    <ion-label position="stacked">Введіть опис позиції</ion-label>
+    <ion-input #InputDescription></ion-input>
+    <ion-label position="stacked">Введіть мінімальну зарплату</ion-label>
+    <ion-input #InputMinSalary></ion-input>
+    <ion-label position="stacked">Введіть максимальну зарплату</ion-label>
+    <ion-input #InputMaxSalary ></ion-input>
+    <ion-button (click)="addPosition(InputPosition.value , InputDescription.value , InputMinSalary.value , InputMaxSalary.value )">
+      Додати позицію
+    </ion-button>
+  </ion-item>
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title> Додати працівника </ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-label position="stacked">Введіть ім'я</ion-label>
+      <ion-input #InputName></ion-input>
+      <ion-label position="stacked">Введіть роботодавця</ion-label>
+      <ion-input #InputEmployer></ion-input>
+      <ion-label position="stacked">Введіть вік</ion-label>
+      <ion-input #InputAge ></ion-input>
+      <ion-label position="stacked">Введіть зарплату</ion-label>
+      <ion-input #InputSalary ></ion-input>
+      <ion-button (click)="addEmployee(InputName.value , InputEmployer.value , InputAge.value , InputSalary.value )">
+        Додати працівника
+      </ion-button>
+      <ion-item>
+        <ion-label>Загальна кількість працівників: {{ employeeList.totalEmployees }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Середня зарплата: {{ employeeList.averageSalary }}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+</ion-content> -->
+
+
+
+<app-my-header name="Лабораторна робота №10"> </app-my-header>
+<ion-content [fullscreen]="true">
+  <ion-item>
+    <ion-button (click)="nextPosition()">Наступна позиція</ion-button>
+    <ion-label> Поточна позиція:</ion-label>
+    <ion-label> {{ position.name }} </ion-label>
+  </ion-item>
+
+  <ion-card *ngFor="let employee of employeeList.searchEmployee; let j = index">
+    <ion-item>{{ employee.employer }}</ion-item>
+    <ion-item>{{ employee.name }}</ion-item>
+    <ion-item>Вік: {{ employee.age }}</ion-item>
+    <ion-item>Зарплата: {{ employee.salary }}</ion-item>
+  </ion-card>
+
+  <ion-item>
+    <ion-label position="floating">Position</ion-label>
+    <ion-input #InputPosition></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Description</ion-label>
+    <ion-input #InputDescription></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Min Salary</ion-label>
+    <ion-input #InputMinSalary></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Max Salary</ion-label>
+    <ion-input #InputMaxSalary></ion-input>
+  </ion-item>
+  <ion-button (click)="addPosition(InputPosition.value, InputDescription.value, InputMinSalary.value, InputMaxSalary.value)">
+    Add Position
+  </ion-button>
+  
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input #InputName></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Employer</ion-label>
+    <ion-input #InputEmployer></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Age</ion-label>
+    <ion-input #InputAge></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="floating">Salary</ion-label>
+    <ion-input #InputSalary></ion-input>
+  </ion-item>
+  <ion-button (click)="addEmployee(InputName.value, InputEmployer.value, InputAge.value, InputSalary.value)">
+    Add Employee
+  </ion-button>
+  
+      <ion-item>
+        <ion-label>Загальна кількість працівників: {{ employeeList.totalEmployees }}</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label>Середня зарплата: {{ employeeList.averageSalary }}</ion-label>
+      </ion-item>
+    
+</ion-content>

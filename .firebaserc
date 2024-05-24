@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "lab10-bafd3": {
+      "hosting": {
+        "app": [
+          "lab10-bafd3"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "lab10-bafd3"
+  }
+}
